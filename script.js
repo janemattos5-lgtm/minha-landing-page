@@ -39,3 +39,13 @@ const intervalo = setInterval(function() {
         clearInterval(intervalo);
     }
 }, 20);
+const cards = document.querySelectorAll(".price-card");
+
+cards.forEach(function(card) {
+    card.addEventListener("click", function() {
+        cards.forEach(function(outroCard) {
+            outroCard.classList.remove("featured");
+        });
+        card.classList.add("featured");
+    });
+});
